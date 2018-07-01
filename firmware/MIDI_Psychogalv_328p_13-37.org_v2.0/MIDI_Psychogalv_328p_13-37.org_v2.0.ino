@@ -55,8 +55,8 @@ const byte analysize = samplesize - 1;  //trim for analysis array
 
 const byte polyphony = 5; //above 8 notes may run out of ram
 
-int noteMin = 36; //C2  - keyboard note minimum
-int noteMax = 96; //C7  - keyboard note maximum
+int noteMin = 32; //C2  - keyboard note minimum
+int noteMax = 36; //C7  - keyboard note maximum
 byte QY8 = 0; //sends each note out chan 1-4, for use with General MIDI like Yamaha QY8 sequencer
 byte controlNumber = 80; //set to mappable control, low values may interfere with other soft synth controls!!
 byte controlVoltage = 1; //output PWM CV on controlLED, pin 17, PB3, digital 11 *lowpass filter
@@ -203,30 +203,21 @@ void checkButton() {
           //value is menu selected
           switch (value) {
             case 0:
-              digitalWrite(10, HIGH);
               delay(250);
-              digitalWrite(10, LOW);
               thresholdMode(); //set change threshold multiplier
               return;
               break;
             case 1:
-              digitalWrite(10, HIGH);
               delay(250);
-              digitalWrite(10, LOW);
               scaleMode(); //set note scale
               return;
               break;
             case 2:
-              digitalWrite(10, HIGH);
               delay(250);
-              digitalWrite(10, LOW);
               channelMode(); //set MIDI output channel
               return;
               break;
             case 3:
-              digitalWrite(10, HIGH);
-              delay(250);
-              digitalWrite(10, LOW);
               brightnessMode(); //set LED max brightness
               return;
               break;
@@ -268,8 +259,8 @@ void readSettings() {
     if (digitalRead(buttonPin) == LOW) {
       initializeEEPROM();
     }
-    // blink WHITE LED 3 times (100ms)
-    blinkLED(3, 200);
+    // blink WHITE LED 3 times (500ms)
+    blinkLED(3, 500);
   }
 
   // read!
@@ -290,9 +281,9 @@ void initializeEEPROM() {
 
 void blinkLED(int num, int milis) {
   for (int i = 0; i < num; i++) {
-    digitalWrite(3, HIGH);
+    digitalWrite(10, HIGH);
     delay(milis);
-    digitalWrite(3, LOW);
+    digitalWrite(10, LOW);
     if (i != num - 1) {
       delay(milis);
     }
