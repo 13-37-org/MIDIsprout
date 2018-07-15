@@ -3,7 +3,7 @@
 All design files are made with FreeCad (fcstd files). 
 The provided STL files are not neccesarily up to date, but it's all compatible.
 
-### Main body (fit's all)
+### Main body
 
 This version is 5mm higher than the earlier revision, so it fits the classic MIDI Sprout,
 even those with trough-hole LEDs or a protruding oscillator.
