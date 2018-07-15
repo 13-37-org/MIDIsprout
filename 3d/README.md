@@ -24,12 +24,12 @@ This version fits only the MIDI Biodata Sonification Device v2.1 by 13-37.org, a
     midi-sprout.fcstd
     midi-sprout-case-v3.stl
 
-# Bottom Cover
+### Bottom Cover
 
     midi-sprout-lid.fcstd
     midi-sprout-lid.stl
 
-## Light diffuser
+### Light diffuser
 
 Just a plate of 51,5mm x 48,75mm x 1mm. It snaps into the main body.
 
