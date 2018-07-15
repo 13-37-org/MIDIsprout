@@ -11,9 +11,11 @@ even those with trough-hole LEDs or a protruding oscillator.
 But I also recommend it for variants with flat LEDs (like newer MIDI Sprouts from DataGarden or the the MIDI Biodata Sonification Device v2.1 by 13-37.org) 
 as it has better light diffusion with the increased distance.
 
-    midi-sprout-classic.fcstd      : 
-    midi-sprout-classic-nohole.stl : version without extra button hole
-    midi-sprout-classic.stl        :
+There are two STL files available, with and without a hole for the button of the above mentioned v2.1 device.
+
+    midi-sprout-classic.fcstd 
+    midi-sprout-classic-nohole.stl 
+    midi-sprout-classic.stl      
 
 ### Main body (older version)
 
