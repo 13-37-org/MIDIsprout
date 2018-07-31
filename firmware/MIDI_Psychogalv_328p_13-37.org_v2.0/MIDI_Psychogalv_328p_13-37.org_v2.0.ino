@@ -55,8 +55,8 @@ const byte analysize = samplesize - 1;  //trim for analysis array
 
 const byte polyphony = 5; //above 8 notes may run out of ram
 
-int noteMin = 32; //C2  - keyboard note minimum
-int noteMax = 36; //C7  - keyboard note maximum
+int noteMin = 36; //C2  - keyboard note minimum
+int noteMax = 96; //C7  - keyboard note maximum
 byte QY8 = 0; //sends each note out chan 1-4, for use with General MIDI like Yamaha QY8 sequencer
 byte controlNumber = 80; //set to mappable control, low values may interfere with other soft synth controls!!
 byte controlVoltage = 1; //output PWM CV on controlLED, pin 17, PB3, digital 11 *lowpass filter
@@ -123,6 +123,7 @@ void setup()
 {
   pinMode(knobPin, INPUT);
   pinMode(buttonPin, INPUT);
+  pinMode(10, OUTPUT);
   digitalWrite(buttonPin, HIGH);
   readSettings();
   randomSeed(analogRead(0)); //seed for QY8 4 channel mode
